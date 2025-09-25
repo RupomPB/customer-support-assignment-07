@@ -1,0 +1,110 @@
+[
+  {
+    "id": "TCK-1001",
+    "title": "Login Issues - Can't Access Account",
+    "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still...",
+    "customer": "Jhankar Mahbub",
+    "priority": "High",
+    "status": "Submitted",
+    "createdAt": "2025-09-20"
+  },
+  {
+    "id": "TCK-1002",
+    "title": "Payment failure",
+    "description": "Transaction failed during checkout process.",
+    "customer": "Habib Utsho",
+    "priority": "High",
+    "status": "Reviewed",
+    "createdAt": "2025-09-19"
+  },
+  {
+    "id": "TCK-1003",
+    "title": "Slow website loading",
+    "description": "Customer reports very slow website performance.",
+    "customer": "Taskin Ahmed",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2025-09-18"
+  },
+  {
+    "id": "TCK-1004",
+    "title": "App crash on startup",
+    "description": "Mobile app crashes immediately after opening.",
+    "customer": "Mustafizur Rahman",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-17"
+  },
+  {
+    "id": "TCK-1005",
+    "title": "Email not syncing",
+    "description": "Emails are not syncing across devices.",
+    "customer": "Neymar Jr",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2025-09-16"
+  },
+  {
+    "id": "TCK-1006",
+    "title": "Password reset request",
+    "description": "Customer forgot password and needs assistance resetting.",
+    "customer": "Lionel Messi",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-09-15"
+  },
+  {
+    "id": "TCK-1007",
+    "title": "Video streaming lag",
+    "description": "Video lags on high quality playback.",
+    "customer": "Cristiano Ronaldo",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-14"
+  },
+  {
+    "id": "TCK-1008",
+    "title": "Invoice missing",
+    "description": "Customer cannot find invoice in account portal.",
+    "customer": "Shakib Al Hasan",
+    "priority": "High",
+    "status": "Submitted",
+    "createdAt": "2025-09-13"
+  },
+  {
+    "id": "TCK-1009",
+    "title": "Push notification issue",
+    "description": "Notifications not arriving on mobile app.",
+    "customer": "Sakib Khan",
+    "priority": "Low",
+    "status": "Reviewed",
+    "createdAt": "2025-09-12"
+  },
+  {
+    "id": "TCK-1010",
+    "title": "Feature request: Dark mode",
+    "description": "Customer requests dark mode support.",
+    "customer": "Salman Khan",
+    "priority": "Low",
+    "status": "Pending",
+    "createdAt": "2025-09-11"
+  },
+  {
+    "id": "TCK-1011",
+    "title": "Unable to upload files",
+    "description": "File upload keeps failing with error 500.",
+    "customer": "Ariana Grande",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-10"
+  },
+  {
+    "id": "TCK-1012",
+    "title": "Report generation issue",
+    "description": "Monthly reports are showing incomplete data.",
+    "customer": "Taylor Swift",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-09-09"
+  }
+]
