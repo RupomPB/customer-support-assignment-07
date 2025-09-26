@@ -1,12 +1,16 @@
-import React from 'react';
+// import React, { useState } from 'react';
 import openimg from "/open.png"
 
 
 
-const Cards = ({issue}) => {
+const Cards = ({issue , handleIssueClicked }) => {
+
+    
+
+
     return (
-       <div key={issue.id} className=' bg-[#fff8f8] rounded-2xl p-4 shadow-xl'>
-                            <div className='flex justify-between items-center'>
+       <div onClick={()=>handleIssueClicked(issue)} key={issue.id} className=' bg-white rounded-2xl p-4 shadow-xl'>
+                            <div className='flex justify-between items-center h-[100px]'>
                                 <h3 className=' font-bold text-2xl'>{issue.title}</h3>
                                <div className=''>
                                   <span className={`font-bold text-green-700 text-lg rounded-3xl  py-2 px-5 flex justify-between gap-2 h-10 items-center 

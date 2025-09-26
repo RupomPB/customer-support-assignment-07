@@ -3,10 +3,10 @@ import React from 'react';
 import Container from '../Container';
 
 
-const Banner = () => {
+const Banner = ({issueSelected=[],  resolvedIssues=[]}) => {
     return (
          <Container>
-        <div className=" grid grid-cols-2 justify-between gap-10 my-8">
+        <div className=" grid grid-cols-2 justify-between gap-10 py-8">
 
           {/* progress part */}
           <div className="  h-[250px] bg-gradient-to-r from-[#632EE3] to-[#9F62F2] flex flex-col justify-center items-center rounded-2xl relative">
@@ -18,7 +18,7 @@ const Banner = () => {
             <img src="/public/bg-right.png"></img>
           </div>
             <h3 className=" font-bold text-4xl text-white">In-Progress</h3>
-            <p className=" font-semibold text-white text-6xl mt-3">0</p>
+            <p className=" font-semibold text-white text-6xl mt-3">{issueSelected.length}</p>
           </div>
 
 
@@ -32,7 +32,7 @@ const Banner = () => {
             <img src="/public/bg-right.png"></img>
           </div>
             <h3 className=" font-bold text-4xl text-white">Resolved </h3>
-            <p className=" font-semibold text-white text-6xl mt-3">0</p>
+            <p className=" font-semibold text-white text-6xl mt-3">{resolvedIssues.length}</p>
           </div>
         </div>
       </Container>
