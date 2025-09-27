@@ -16,13 +16,16 @@ const IssueManagement = ({ setIssueSelected , issueSelected , removeIssue, handl
 
             <div className=" border-2 border-amber-400 grid grid-cols-12 py-10">
 
-                    <div className='border-2 border-red-500 col-span-9 p-2'>
+                    <div className='col-span-12 lg:col-span-9 p-2'>
                     <h1 className=' text-3xl font-semibold p-4 text-gray-500 '>Customer Tickets</h1>
 
                     {/* cards sections*/}
-                    <div className=' grid grid-cols-2 gap-4'>
+                    <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
             {
-                allIssues.map(issue =>{
+                allIssues.length ===0 ?(
+                    <p> No More Cards Left</p>
+                ) : (
+                    allIssues.map(issue =>{
                     {/* console.log(issue); */}
                  return (
 
@@ -30,12 +33,13 @@ const IssueManagement = ({ setIssueSelected , issueSelected , removeIssue, handl
 
                  )
                 })
+                )
             }
                     </div>
                     </div>
 
             {/* task sections */}
-                    <div className='border-2 border-black col-span-3 '>
+                    <div className='border-2 col-span-12  lg:col-span-3 '>
                        <h1 className=' text-2xl p-5 font-semibold text-gray-500'> Task Status</h1> 
                 <Task resolvedIssues={resolvedIssues} removeIssue={removeIssue} issueSelected ={issueSelected} ></Task>
                 <h1 className=' text-2xl p-5 font-semibold text-gray-500'>Resolved  Task</h1>

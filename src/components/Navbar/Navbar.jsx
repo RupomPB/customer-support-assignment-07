@@ -1,14 +1,16 @@
 import React from 'react';
 import Container from '../Container';
-
+import { MdOutlineMenu } from 'react-icons/md';
 
 const Navbar = () => {
     return (
          <div className=" bg-[#ffffff] shadow-md border-b-[0.5px] border-gray-300">
       <Container>
-      <nav className=" py-4 flex justify-between items-center">
+      <nav className=" py-4 flex flex-row  md:flex justify-between items-center">
         <h1 className="md:text-xl text-sm font-bold">CS — Ticket System</h1>
-        <div className="md:flex hidden items-center gap-6">
+
+
+        <div className="  md:flex hidden items-center gap-6">
           <a href="#" className="text-gray-600">
             Home
           </a>
@@ -35,7 +37,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className="block md:hidden">
-          {/* <MdOutlineMenu /> */}
+          <MdOutlineMenu></MdOutlineMenu>
         </div>
       </nav>
       </Container>
