@@ -28,36 +28,54 @@ function App() {
 
   const fetchPromise = fetchIssue();
   fetchPromise.then((data)=>{
-    if(allIssues.length ===0 ) setAllIssues(data)
+    if(allIssues.length ===0 ){
+      setAllIssues(data)
+    }
   })
 
 
   const removeIssue =(id)=>{
     const removed= issueSelected.find(issue => issue.id ===id);
-    toast.success(`${removed.title} - Resolved Done`)
-    if(removed){
-      setResolvedIssues([...resolvedIssues, removed]);
+    
+    if(!removed) return;
+    
+      
+      const updatedRemoved ={...removed, status:"Resolved"};
+      
+      toast.success(`${removed.title} - Resolved Done`)
+
+      setResolvedIssues([...resolvedIssues, updatedRemoved]);
       setIssueSelected(issueSelected.filter(issue=> issue.id !==id));
-    }
+    setAllIssues(allIssues.filter(issue=> issue.id !==id));  
   
   }
 
   const handleIssueClicked=(issueData)=>{
+    if(!issueData) return;
         console.log("card clicked",issueData)
         
-        toast.info(` ${issueData.title} - Added To Task`,{
-          position: "top-center", 
-          autoClose: 2000,
-        })
+      
+      const alreadySelected = issueSelected.find(issue=> issue.id === issueData.id);
+      if(alreadySelected){
+        toast.warn(`${issueData.title} is already in progress`)
+        return
+      }
 
-        const updatedIssues =(allIssues.filter((issue)=>issue.id !== issueData.id));
-        setAllIssues(updatedIssues);
-        setIssueSelected([...issueSelected, issueData])
-
-        if(updatedIssues.length ===0 ){
-          toast.success("Congratulations No More Card Left")
+      // const updatedIssues =(allIssues.filter((issue)=>issue.id !== issueData.id));
+      // setAllIssues(updatedIssues);
+      // setIssueSelected([...issueSelected, issueData])
+      const updatedIssue ={...issueData, status:"In Progress"};
+      
+      toast.info(` ${issueData.title} - Added To Task`,{
+        position: "top-right", 
+        autoClose: 2000,
+      })
+      setIssueSelected([...issueSelected, updatedIssue]);
+      
+        // if(updatedIssues.length ===0 ){
+        //   toast.success("Congratulations No More Card Left")
          
-        }
+        // }
         
     }
 
