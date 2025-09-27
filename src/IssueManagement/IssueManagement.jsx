@@ -3,8 +3,7 @@ import React from 'react';
 import Cards from '../components/Cards/Cards';
 import Container from '../components/Container';
 import Task from '../components/Taskbar/Task';
-
-
+import ResolvedTask from '../components/Taskbar/ResolvedTask';
 
 
 const IssueManagement = ({ setIssueSelected , issueSelected , removeIssue, handleIssueClicked , allIssues, resolvedIssues}) => {
@@ -39,7 +38,9 @@ const IssueManagement = ({ setIssueSelected , issueSelected , removeIssue, handl
                     <div className='border-2 border-black col-span-3 '>
                        <h1 className=' text-2xl p-5 font-semibold text-gray-500'> Task Status</h1> 
                 <Task resolvedIssues={resolvedIssues} removeIssue={removeIssue} issueSelected ={issueSelected} ></Task>
+                <h1 className=' text-2xl p-5 font-semibold text-gray-500'>Resolved  Task</h1>
 
+                <ResolvedTask resolvedIssues={resolvedIssues} issueSelected={issueSelected}></ResolvedTask>
                     </div>
         </div>
         </Container>
