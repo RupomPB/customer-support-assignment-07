@@ -14,7 +14,7 @@ const IssueManagement = ({ setIssueSelected , issueSelected , removeIssue, handl
     return (
         <Container>
 
-            <div className=" border-2 border-amber-400 grid grid-cols-12 py-10">
+            <div className="  grid grid-cols-12 py-10">
 
                     <div className='col-span-12 lg:col-span-9 p-2'>
                     <h1 className=' text-3xl font-semibold p-4 text-gray-500 '>Customer Tickets</h1>
@@ -39,7 +39,7 @@ const IssueManagement = ({ setIssueSelected , issueSelected , removeIssue, handl
                     </div>
 
             {/* task sections */}
-                    <div className='border-2 col-span-12  lg:col-span-3 '>
+                    <div className=' col-span-12  lg:col-span-3 '>
                        <h1 className=' text-2xl p-5 font-semibold text-gray-500'> Task Status</h1> 
                 <Task resolvedIssues={resolvedIssues} removeIssue={removeIssue} issueSelected ={issueSelected} ></Task>
                 <h1 className=' text-2xl p-5 font-semibold text-gray-500'>Resolved  Task</h1>
